@@ -71,3 +71,43 @@ trial()
 trial()
 }
 test2(test)
+
+
+function adds(a,b,cb){ //high order function
+    let sum = a+b;
+    cb(sum);
+
+    return () => console.log(sum);
+}
+
+function showRes(sum){ //callback function
+    console.log(sum);
+}
+
+adds(7,3, showRes); // this is one form
+adds(7,4, (sum) => console.log(sum)) //this is another form using arrow function
+
+
+//Closures: A closure is a function that has access to its own scope, the outer function's scope, and the global scope.
+let resFunc = adds(6,6,()=>{}) // this will return a function
+resFunc();
+
+
+Arrays 
+
+const  students =['Pratik','Sanket','Ankush','Rohit'];
+
+students.push('Ajay'); // adds element at last
+console.log(students + ' '+ students.length );
+students.pop() // removes last element
+console.log(students +' '+ students.length );
+students.push('Ajay');
+console.log(students + students.length );
+
+
+myArr = [true, 'Test', 55] // mixed array
+console.log(myArr);
+myArr.push({state:'KA', Contact: 9988776655}) // adding object to array
+console.log(myArr.indexOf(true)); // gives index of element
+console.log(myArr.includes(56)); // checks if element is present or not
+console.log(myArr.reverse()); // reverses the array
