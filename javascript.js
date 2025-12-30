@@ -144,3 +144,55 @@ console.log(newMapArr)
 
 let newFilterArr = arrNum.filter((val)=> val > 10000 )
 console.log(newFilterArr)
+
+
+let arr = [
+  {
+    name: "Item 1",
+    details: { id: 1, category: "A" },
+    tags: [
+      { label: "alpha", type: "primary" },
+      { label: "beta", type: "secondary" },
+      { label: "gamma", type: "tertiary" }
+    ]
+  },
+  {
+    name: "Item 2",
+    details: { id: 2, category: "B" },
+    tags: [
+      { label: "delta", type: "primary" },
+      { label: "epsilon", type: "secondary" }
+    ]
+  },
+  {
+    name: "Item 3",
+    details: { id: 3, category: "C" },
+    tags: [
+      { label: "zeta", type: "primary" },
+      { label: "eta", type: "secondary" },
+      { label: "theta", type: "tertiary" }
+    ]
+  }
+];
+// let a =arr.forEach(val => console.log( val.tags.filter(ele => ele.type==="secondary")[0].label))
+
+// console.log(a)
+
+const newArrF = arr.find((val)=>val.details.category ==="B")
+      const neww = newArrF.tags.find(el => el.type === "primary")
+      console.log(neww.label)
+
+ 
+// let res1 = arr.flatMap(val=>val.tags.filter(ele => ele.type ==="secondary").map(res =>res.label))
+// console.log(arr.flatMap(val=>val.tags.filter(ele => ele.type ==="secondary")));
+
+// let res2 = arr.forEach((val) => val.tags.filter((ele) =>ele.label =="secondary").map(res =>res.label))
+// console.log(res2)
+
+const s1 = "hello";
+const s2 = new String("hello") //new string constructor --> instead of creating string this will create a string object
+console.log(s1 == s2);
+// true js will type coersion here while comparing a string and obj(obj will be convered to string)
+console.log(s1 === s2);
+// false this will not apply any type coersion this will strictly check what has been assinged to s2 and it will compare it. data type of s1 is string data type of s2 is object so it will return false.
+
