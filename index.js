@@ -277,7 +277,45 @@ const obj ={
 obj.myFunc()
  
 
+/*-------------------Practice Questions------------------------*/
+/* 1. For a given array of marks of student fing the average marks of entire class
+marks =[75,85,95,65,55,45]*/ 
+let marks =[75,85,95,65,55,45];
+let sum = 0;
+for(let i =0; i < marks.length; i++){
+    sum = sum + marks[i];
+}
+/*this for or below for can be used */
+for(let val of marks){
+    sum+= val
+}
+let avg = sum /marks.length
+console.log(`${avg}`);
 
+
+/*create a array of companies companies = ["Bloomberg","Microsoft","Netflix","Uber","Google","IBM"]
+companies.shift();
+1. remove 1st element from the array
+2. remove uber and replace it with Ola
+3. Add amazon at the end of array
+*/
+let companies = ["Bloomberg","Microsoft","Netflix","Uber","Google","IBM"]
+companies.shift();
+companies.splice(2,1,"Ola");
+companies.push("Amazon")
+console.log(companies)
+
+let result =  data.forEach(el =>                                                                                                                                                                                                 
+    {
+        el.attributes.forEach(kv=>{
+            if(obj[kv.userKey]){
+                obj[kv.userKey] = `${obj[kv.userKey]}, ${kv.value}`;
+            }else{
+                obj[kv.userKey]=kv.value;
+            }
+         })
+        })
+console.log(obj)
 
 
  
